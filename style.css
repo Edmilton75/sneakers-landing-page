@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  /* font family */
+
+  --font: "Kumbh Sans", sans-serif;
+
+  /* Primary */
+
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+
+  /*  Neutral */
+
+  --very-dark-blue: hsl(220, 13%, 13%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+  --grayish-blue: hsl(220, 14%, 75%);
+  --light-grayish-blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black-opacity: hsl(0, 0%, 0%);
+}
+
+html {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: var(--font);
+}
+
+header {
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  gap: 2rem;
+  margin-left: 1rem;
+  align-items: baseline;
+}
+
+nav {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--very-dark-blue);
+}
+
+.container-user-car {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  margin-right: 2rem;
+  gap: 2rem;
+}
+
+.user-img {
+  width: 3rem;
+}
+
+.car-icone {
+  width: 1.2rem;
+}
+
+.conatiner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem;
+}
