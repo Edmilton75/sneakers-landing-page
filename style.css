@@ -28,17 +28,26 @@
 }
 
 html {
-  max-width: 1440px;
+  max-width: 2000px;
   margin: 0 auto;
   font-family: var(--font);
 }
 
 header {
-  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.container-header {
+  width: 100%;
+  height: 6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+  padding-bottom: 2rem;
 }
 
 .logo {
@@ -49,14 +58,14 @@ header {
 }
 
 nav {
-  width: 600px;
+  width: 60%;
   display: flex;
   justify-content: space-around;
   gap: 1rem;
 }
 
 nav a {
-  color: var(--very-dark-blue);
+  color: var(--dark-grayish-blue);
 }
 
 .container-user-car {
@@ -81,5 +90,140 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 5rem;
+}
+
+.container-imagens {
+  width: 50%;
+}
+
+.img-principal {
+  width: 100%;
+}
+
+.img-principal img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.container-text {
+  width: 50%;
   padding: 3rem;
+}
+
+.text-init {
+  width: 100%;
+}
+
+.sub-imgs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 6%;
+}
+
+.sub-imgs img {
+  width: 20%;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.marca {
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.title-product {
+  font-size: 3rem;
+  color: var(--black-opacity);
+  margin-bottom: 2rem;
+}
+
+.text-product {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.prices {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.preco {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 0.6rem;
+}
+
+.desconto {
+  border: 3px solid var(--pale-orange);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--orange);
+  background: var(--pale-orange);
+  border-radius: 8px;
+}
+
+.valor-desconto {
+  color: var(--grayish-blue);
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.container-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.btn-less {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange);
+  border: none;
+  background: none;
+  margin-left: 10px;
+  width: 2rem;
+}
+
+.contador {
+  font-size: 0.8rem;
+  width: 4rem;
+  text-align: center;
+}
+
+.btn-plus {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--orange);
+
+  border: none;
+  background: none;
+  margin-left: 10px;
+  width: 2rem;
+}
+.container-btn-card {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-add-card {
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 700;
 }

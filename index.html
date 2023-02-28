@@ -17,27 +17,29 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="./images/logo.svg" alt="Logomarca Sneakers" />
-      </div>
-      <nav>
-        <a href="#">Collections</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div class="container-user-car">
-        <img
-          class="car-icone"
-          src="./images/icon-cart.svg"
-          alt="Icone de carrinho de compra"
-        />
-        <img
-          class="user-img"
-          src="./images/image-avatar.png"
-          alt="Imagen do usuario logado"
-        />
+      <div class="container-header">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="Logomarca Sneakers" />
+        </div>
+        <nav>
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="container-user-car">
+          <img
+            class="car-icone"
+            src="./images/icon-cart.svg"
+            alt="Icone de carrinho de compra"
+          />
+          <img
+            class="user-img"
+            src="./images/image-avatar.png"
+            alt="Imagen do usuario logado"
+          />
+        </div>
       </div>
     </header>
     <section class="conatiner">
@@ -54,14 +56,27 @@
       </div>
       <div class="container-text">
         <div class="text-init">
-          <p>SNEAKER COMPANY</p>
-          <h1>Fall Limited edition Sneakers</h1>
-          <p>
+          <p class="marca">SNEAKER COMPANY</p>
+          <h1 class="title-product">Fall Limited edition Sneakers</h1>
+          <p class="text-product">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
             pariatur voluptate voluptas sunt perferendis cupiditate libero
             praesentium excepturi quia aliquid eaque quam eligendi saepe, aut
             laboriosam maiores autem facilis dolorum!
           </p>
+        </div>
+        <div class="prices">
+          <span class="preco">$125.00</span>
+          <span class="desconto">50%</span>
+        </div>
+        <p class="valor-desconto">$250.00</p>
+        <div class="container-buttons">
+          <button class="btn-less">-</button>
+          <span class="contador">0</span>
+          <button class="btn-plus">+</button>
+          <div class="container-btn-card">
+            <button class="btn-add-card">Add to cart</button>
+          </div>
         </div>
       </div>
     </section>
