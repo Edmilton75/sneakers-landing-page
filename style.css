@@ -27,10 +27,14 @@
   --black-opacity: hsl(0, 0%, 0%);
 }
 
-html {
-  max-width: 2000px;
-  margin: 0 auto;
+body {
   font-family: var(--font);
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -85,7 +89,7 @@ nav a {
   width: 1.2rem;
 }
 
-.conatiner {
+.container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -104,6 +108,7 @@ nav a {
 .img-principal img {
   width: 100%;
   border-radius: 1rem;
+  transition: all 150ms ease-in-out;
 }
 
 .container-text {
@@ -128,6 +133,19 @@ nav a {
   border-radius: 10px;
   display: flex;
   margin-top: 2rem;
+  transition: all 150ms ease-in-out;
+}
+
+img:hover {
+  filter: opacity(50%);
+}
+
+img {
+  cursor: pointer;
+}
+
+.opacity {
+  filter: opacity(50%);
 }
 
 .marca {
@@ -189,6 +207,8 @@ nav a {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--orange);
+  cursor: pointer;
+
   border: none;
   background: none;
   margin-left: 10px;
@@ -202,15 +222,29 @@ nav a {
 }
 
 .btn-plus {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--orange);
+  cursor: pointer;
 
   border: none;
   background: none;
   margin-left: 10px;
   width: 2rem;
 }
+
+.btn-less:hover {
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+.btn-plus:hover {
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
 .container-btn-card {
   width: 100%;
   display: flex;
@@ -226,4 +260,137 @@ nav a {
   color: var(--white);
   font-size: 0.9rem;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-add-card:hover {
+  background: var(--pale-orange);
+  color: var(--orange);
+  border: 0.5px solid var(--orange);
+}
+
+.modal-imgs {
+  width: 100vw;
+  max-width: 100%; /* quanto usar o width: 100vw é preciso setar o max-width, pra evitar overflow */
+  height: 100vh;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsla(0, 0%, 0%, 0.644);
+  /* transition: all 5s ease-in-out; */
+  animation: fadeIn both ease-in-out 250ms;
+  z-index: 10;
+}
+
+.modal-imgs.ativo {
+  display: flex;
+  overflow: hidden;
+}
+
+.container-modal-imgs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.img-modal-principal {
+  max-width: 90%;
+  max-height: 90%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-imgs img {
+  width: 70%;
+  border-radius: 8px;
+  filter: none;
+}
+
+.modal-sub-imgs {
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-sub-imgs img {
+  width: 20%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .container-imagens {
+    width: 100%;
+  }
+
+  .img-principal img {
+    border-radius: 0;
+  }
+
+  .sub-imgs {
+    display: none;
+  }
+
+  .container-text {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .title-product {
+    font-size: 2rem;
+  }
+
+  .valor-desconto {
+    width: 100%;
+    text-align: end;
+    margin-top: -25px;
+  }
+
+  .container-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container-btn-card {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .btn-add-card {
+    width: 100%;
+  }
+
+  .modal-imgs {
+    display: none;
+  }
 }
