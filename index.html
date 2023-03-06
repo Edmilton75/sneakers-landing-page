@@ -16,17 +16,20 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <div class="modal-imgs">
-      <div class="container-modal-imgs">
-        <div class="img-modal-principal">
-          <img src="./images/image-product-1.jpg" alt="" />
-        </div>
-        <div class="modal-sub-imgs">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="" />
-          <img src="./images/image-product-2-thumbnail.jpg" alt="" />
-          <img src="./images/image-product-3-thumbnail.jpg" alt="" />
-          <img src="./images/image-product-4-thumbnail.jpg" alt="" />
-        </div>
+    <div class="modal-imgs"></div>
+    <div class="container-modal-imgs">
+      <div class="img-modal-principal">
+        <img
+          class="modal-img-principal"
+          src="./images/image-product-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="modal-sub-imgs">
+        <img src="./images/image-product-1.jpg" alt="Imagen do produto 01" />
+        <img src="./images/image-product-2.jpg" alt="Imagen do produto 02" />
+        <img src="./images/image-product-3.jpg" alt="Imagen do produto 03" />
+        <img src="./images/image-product-4.jpg" alt="Imagen do produto 04" />
       </div>
     </div>
     <header>
@@ -101,9 +104,11 @@
         </div>
         <p class="valor-desconto">$250.00</p>
         <div class="container-buttons">
-          <button class="btn-less">-</button>
-          <span class="contador">0</span>
-          <button class="btn-plus">+</button>
+          <div class="container-plus-less">
+            <button class="btn-less">-</button>
+            <span class="contador">0</span>
+            <button class="btn-plus">+</button>
+          </div>
           <div class="container-btn-card">
             <button class="btn-add-card">Add to cart</button>
           </div>
