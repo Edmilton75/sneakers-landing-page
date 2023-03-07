@@ -267,23 +267,35 @@ img {
 .container-btn-card {
   width: 100%;
   display: flex;
-  justify-content: end;
+  background: var(--orange);
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 125ms ease-in-out;
+  gap: 10px;
+}
+
+.btn-car-icone {
+  font-size: 4rem;
+  transform: scale(0.8);
+}
+
+.btn-car-icone path {
+  fill: var(--white);
 }
 
 .btn-add-card {
-  width: 100%;
   height: 2.5rem;
   border-radius: 8px;
   border: none;
-  background: var(--orange);
+  background: none;
   color: var(--white);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  cursor: pointer;
-  transition: all 125ms ease-in-out;
 }
 
-.btn-add-card:hover {
+.container-btn-card:hover {
   filter: opacity(50%);
   box-shadow: 6px 10px 30px -14px var(--orange);
 }
@@ -298,7 +310,6 @@ img {
   padding-bottom: 0px;
   bottom: 0;
   background: hsla(0, 0%, 0%, 0.644);
-  /* transition: all 5s ease-in-out; */
   animation: fadeIn both ease-in-out 250ms;
   z-index: 10;
 }
@@ -312,7 +323,6 @@ img {
   position: absolute;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   z-index: 20;
   width: 30%;
   margin-top: 3rem;
@@ -358,6 +368,45 @@ img {
 .modal-sub-imgs img {
   width: 20%;
   border-radius: 1rem;
+  transition: all 150ms ease-in-out;
+}
+
+.modal-sub-imgs img:hover {
+  filter: brightness(130%);
+}
+
+.btn-close-modal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: end;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+
+  z-index: 40;
+}
+
+.btn-close-modal span {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: -2.3rem;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-close-modal span:hover {
+  filter: brightness(130%);
+}
+
+.brt-car-icone {
+  fill: aliceblue;
+  width: 3rem;
 }
 
 @keyframes fadeIn {

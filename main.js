@@ -10,6 +10,7 @@ const modalSubImagens = document.querySelectorAll(".modal-sub-imgs img");
 const btnLess = document.querySelector(".btn-less");
 const btnPlus = document.querySelector(".btn-plus");
 const contador = document.querySelector(".contador");
+const btnCloseModal = document.querySelector(".btn-close-modal span");
 
 // função alterar imagen principal
 function callback(e) {
@@ -59,7 +60,7 @@ const addAtivo = () => {
   window.scroll(0, 0);
 };
 
-// fuunção remover modal
+// função remover modal
 const removeModal = () => {
   modal.classList.remove("ativo");
   imgsModal.classList.remove("ativo");
@@ -69,3 +70,4 @@ const removeModal = () => {
 
 principalImg.addEventListener("click", addAtivo);
 modal.addEventListener("click", removeModal);
+btnCloseModal.addEventListener("click", removeModal);
