@@ -12,8 +12,22 @@ const btnPlus = document.querySelector(".btn-plus");
 const contador = document.querySelector(".contador");
 const btnCloseModal = document.querySelector(".btn-close-modal span");
 
+const arrowLeft = document.querySelector(".container-seta-left");
+const arrowRight = document.querySelector(".container-seta-right");
+
+const modalMobile = document.querySelector(".modal-mobile");
+const modalMenuMobile = document.querySelector(".modal-menu-mobile");
+const iconClose = document.querySelector(".icon-close");
+
 // função alterar imagen principal
 function callback(e) {
+  subImg.forEach((teste) => {
+    if (teste.classList.contains("active")) {
+      teste.classList.remove("active");
+    }
+    return teste;
+  });
+  e.target.classList.add("active");
   principalImg.src = e.target.src;
   imgModalPrincipal.src = e.target.src;
 }
@@ -24,6 +38,14 @@ subImg.forEach((imgs) => {
 
 // funçaõ alterar imagen modal
 function modalCallback(e) {
+  console.log(e.target);
+  modalSubImagens.forEach((teste) => {
+    if (teste.classList.contains("active")) {
+      teste.classList.remove("active");
+    }
+    return teste;
+  });
+  e.target.classList.add("active");
   modalImgPrincipal.src = e.target.src;
 }
 
@@ -54,10 +76,12 @@ contador.innerText = amountProduct.toString();
 
 // função adicionar modal e zerar scroll
 const addAtivo = () => {
-  modal.classList.add("ativo");
-  imgsModal.classList.add("ativo");
-  body.classList.add("overflow-body");
-  window.scroll(0, 0);
+  if (window.innerWidth > 375) {
+    modal.classList.add("ativo");
+    imgsModal.classList.add("ativo");
+    body.classList.add("overflow-body");
+    window.scroll(0, 0);
+  }
 };
 
 // função remover modal
@@ -68,6 +92,36 @@ const removeModal = () => {
   body.classList.remove("overflow-body");
 };
 
+let carrossel = modalSubImagens.length;
+// função carrossel
+const previewImg = () => {
+  if (carrossel > 0) {
+    carrossel--;
+    modalImgPrincipal.src = modalSubImagens[carrossel].currentSrc;
+  }
+};
+
+const nextImg = () => {
+  if (carrossel < modalSubImagens.length) {
+    carrossel++;
+    modalImgPrincipal.src = modalSubImagens[carrossel].currentSrc;
+  }
+};
+
+const openModalMobile = () => {
+  modalMobile.classList.add("open-modal-mobile");
+};
+
+const closeModalMobile = () => {
+  modalMobile.classList.remove("open-modal-mobile");
+};
+
+arrowLeft.addEventListener("click", previewImg);
+arrowRight.addEventListener("click", nextImg);
+
 principalImg.addEventListener("click", addAtivo);
 modal.addEventListener("click", removeModal);
 btnCloseModal.addEventListener("click", removeModal);
+
+modalMenuMobile.addEventListener("click", openModalMobile);
+iconClose.addEventListener("click", closeModalMobile);

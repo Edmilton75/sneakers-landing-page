@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -16,11 +14,67 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
+    <div class="modal-mobile">
+      <svg
+        class="icon-close"
+        width="14"
+        height="15"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+          fill="#69707D"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <nav class="mobile-nav">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
     <div class="modal-imgs"></div>
     <div class="container-modal-imgs">
       <div class="btn-close-modal">
         <span>X</span>
       </div>
+      <div class="container-setas-modal">
+        <div class="container-seta-left">
+          <svg
+            class="seta-left"
+            width="13"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 1 3 9l8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="container-seta-right">
+          <svg
+            class="seta-right"
+            width="13"
+            height="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m2 1 8 8-8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+
       <div class="img-modal-principal">
         <img
           class="modal-img-principal"
@@ -37,6 +91,15 @@
     </div>
     <header>
       <div class="container-header">
+        <div class="modal-menu-mobile">
+          <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+              fill="#69707D"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
         <div class="logo">
           <img src="./images/logo.svg" alt="Logomarca Sneakers" />
         </div>
