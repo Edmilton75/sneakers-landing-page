@@ -19,6 +19,10 @@ const modalMobile = document.querySelector(".modal-mobile");
 const modalMenuMobile = document.querySelector(".modal-menu-mobile");
 const iconClose = document.querySelector(".icon-close");
 
+const arrowLeftMobile = document.querySelector(".container-seta-left-mobile");
+
+const arrowRightMobile = document.querySelector(".container-seta-right-mobile");
+
 // função alterar imagen principal
 function callback(e) {
   subImg.forEach((teste) => {
@@ -43,7 +47,6 @@ function modalCallback(e) {
     if (teste.classList.contains("active")) {
       teste.classList.remove("active");
     }
-    return teste;
   });
   e.target.classList.add("active");
   modalImgPrincipal.src = e.target.src;
@@ -108,6 +111,29 @@ const nextImg = () => {
   }
 };
 
+let mobileCarrosel = 0;
+
+const arrowClickRight = () => {
+  if (mobileCarrosel < subImg.length - 1) {
+    mobileCarrosel++;
+    principalImg.src = subImg[mobileCarrosel].src;
+  } else {
+    console.log(mobileCarrosel);
+    mobileCarrosel = 0;
+    principalImg.src = subImg[mobileCarrosel].src;
+  }
+};
+
+const arrowClickLeft = () => {
+  if (mobileCarrosel < subImg.length && mobileCarrosel !== 0) {
+    mobileCarrosel--;
+    principalImg.src = subImg[mobileCarrosel].src;
+  } else {
+    mobileCarrosel = subImg.length - 1;
+    principalImg.src = subImg[mobileCarrosel].src;
+  }
+};
+
 const openModalMobile = () => {
   modalMobile.classList.add("open-modal-mobile");
 };
@@ -125,3 +151,6 @@ btnCloseModal.addEventListener("click", removeModal);
 
 modalMenuMobile.addEventListener("click", openModalMobile);
 iconClose.addEventListener("click", closeModalMobile);
+
+arrowLeftMobile.addEventListener("click", arrowClickLeft);
+arrowRightMobile.addEventListener("click", arrowClickRight);

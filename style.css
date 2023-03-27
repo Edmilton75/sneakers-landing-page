@@ -467,6 +467,11 @@ img {
 .modal-menu-mobile {
   display: none;
 }
+
+.container-setas-mobile {
+  display: none;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -577,6 +582,7 @@ img {
     background: var(--light-grayish-blue);
     border-radius: 8px;
     margin-bottom: 1rem;
+    margin-right: 0;
     transition: all 125ms ease-in-out;
     justify-content: space-between;
   }
@@ -616,6 +622,7 @@ img {
     margin-top: 1rem;
     margin-bottom: 2rem;
     transform: scale(0.8);
+    cursor: pointer;
   }
 
   .mobile-nav a {
@@ -623,5 +630,47 @@ img {
     font-weight: 700;
     color: black;
     padding-left: 1rem;
+  }
+
+  .container-setas-mobile {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 37%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 40;
+  }
+
+  .container-seta-left-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1.2rem;
+    background: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .container-seta-right-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.2rem;
+    background: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .seta-right-mobile {
+    transform: scale(0.8);
+  }
+
+  .seta-left-mobile {
+    transform: scale(0.8);
   }
 }
