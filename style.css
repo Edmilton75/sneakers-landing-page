@@ -161,7 +161,7 @@ img {
   filter: opacity(50%);
 }
 
-.marca {
+.title-logo {
   color: var(--orange);
   font-size: 0.8rem;
   font-weight: 700;
@@ -186,13 +186,13 @@ img {
   align-items: center;
 }
 
-.preco {
+.price {
   font-size: 1.5rem;
   font-weight: 700;
   margin-right: 0.6rem;
 }
 
-.desconto {
+.discount {
   border: 3px solid var(--pale-orange);
   font-size: 0.8rem;
   font-weight: 700;
@@ -201,7 +201,7 @@ img {
   border-radius: 8px;
 }
 
-.valor-desconto {
+.value-discount {
   color: var(--grayish-blue);
   text-decoration: line-through;
   font-size: 0.8rem;
@@ -315,7 +315,7 @@ img {
 
 /* modal */
 
-.modal-imgs {
+.modal-desktop {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -327,11 +327,11 @@ img {
   z-index: 10;
 }
 
-.modal-imgs.ativo {
+.modal-desktop.ativo {
   display: flex;
 }
 
-.container-modal-imgs {
+.container-modal-desktop {
   display: none;
   position: absolute;
   align-items: center;
@@ -341,7 +341,7 @@ img {
   margin-top: 3rem;
 }
 
-.container-modal-imgs.ativo {
+.container-modal-desktop.ativo {
   display: flex;
 }
 
@@ -552,7 +552,7 @@ img {
     font-size: 2rem;
   }
 
-  .valor-desconto {
+  .value-discount {
     width: 100%;
     text-align: end;
     margin-top: -25px;

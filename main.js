@@ -1,8 +1,8 @@
 const body = document.body;
-const modal = document.querySelector(".modal-imgs");
-const principalImg = document.querySelector(".prinipal-img");
+const modal = document.querySelector(".modal-desktop");
+const principalImg = document.querySelector(".principal-img");
 const imgModalPrincipal = document.querySelector(".modal-img-principal");
-const imgsModal = document.querySelector(".container-modal-imgs");
+const imgsModal = document.querySelector(".container-modal-desktop");
 const subImg = document.querySelectorAll(".sub-imgs img");
 const modalImgPrincipal = document.querySelector(".modal-img-principal");
 const modalSubImagens = document.querySelectorAll(".modal-sub-imgs img");
@@ -42,7 +42,6 @@ subImg.forEach((imgs) => {
 
 // funçaõ alterar imagen modal
 function modalCallback(e) {
-  console.log(e.target);
   modalSubImagens.forEach((teste) => {
     if (teste.classList.contains("active")) {
       teste.classList.remove("active");
